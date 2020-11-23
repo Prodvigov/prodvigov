@@ -1,19 +1,50 @@
 <template>
+  
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+ 
+  <div>
+
+    <Navbar />
+
+    <b-container>
+
+    <FormCheck />
+  
+    <div class="row justify-content-center">
+
+    </div>
+
+    <div class="row mb-5 mt-5">
+
+    <Table />
+
+  </div>
+
+    </b-container>
+  </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import Navbar from '@/components/Navbar'
+import FormCheck from '@/components/FormCheck'
+import Table from '@/components/Table'
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    HelloWorld
+    Navbar,
+    FormCheck,
+    Table
+},
+    data() {
+      return {
+        
+      }
+    }
   }
-}
 </script>
 
 <style>
@@ -21,8 +52,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
+
 </style>
